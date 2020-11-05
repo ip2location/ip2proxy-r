@@ -1,0 +1,16 @@
+Package: ip2proxy
+Type: Package
+Title: Lookup for IP Address Proxy Information
+Version: 1.0.0
+Author: IP2Location
+Maintainer: IP2Location <support@ip2location.com>
+Description: A R package to find the IP addresses which are used as VPN anonymizer, open proxies, web proxies and Tor exits.
+    The package lookup the proxy IP address from IP2Proxy BIN Data file. You may visit <https://lite.ip2location.com> for free database download. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.2.3)
+Imports: reticulate (>= 1.13), stringr (>= 1.4.0), jsonlite (>= 1.6)
+LazyData: true
+SystemRequirements: IP2Proxy Python library
+        <https://www.ip2location.com/development-libraries/ip2proxy/python>
+RoxygenNote: 7.1.1
