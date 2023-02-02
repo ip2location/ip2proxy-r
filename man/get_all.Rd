@@ -13,11 +13,11 @@ get_all(ip)
 Return all the proxy information about the IP address
 }
 \description{
-Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen and threat type. The return values will be depending on the BIN data loaded.
+Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type and provider. The return values will be depending on the BIN data loaded.
 }
 \examples{
-\donttest{
-get_all("8.8.8.8")
+\dontrun{
+get_all("1.0.241.135")
 }
 
 }

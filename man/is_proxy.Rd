@@ -16,8 +16,8 @@ Return a digit value: -1 (errors), 0 (not a proxy), 1 (a proxy), and 2 (a data c
 Check whether if an IP address was a proxy.
 }
 \examples{
-\donttest{
-is_proxy("8.8.8.8")
+\dontrun{
+is_proxy("1.0.241.135")
 }
 
 }

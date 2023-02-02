@@ -13,7 +13,7 @@ open(bin_location)
 Load the IP2Proxy BIN data for lookup. Free IP2Proxy LITE data available for download at <https://lite.ip2location.com/>
 }
 \examples{
-\donttest{
+\dontrun{
 open("~/IP-COUNTRY.BIN")
 }
 

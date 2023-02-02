@@ -5,7 +5,7 @@
 #' @return NULL
 #' @import reticulate
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' open("~/IP-COUNTRY.BIN")
 #' }
 #'
@@ -19,14 +19,14 @@ open <- function(bin_location){
 
 #' @title Lookup for IP address proxy information
 #'
-#' @description Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen and threat type. The return values will be depending on the BIN data loaded.
+#' @description Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type and provider. The return values will be depending on the BIN data loaded.
 #' @param ip IPv4 or IPv6 address
 #' @return Return all the proxy information about the IP address
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
-#' get_all("8.8.8.8")
+#' @examples \dontrun{
+#' get_all("1.0.241.135")
 #' }
 #'
 
@@ -45,8 +45,8 @@ get_all <- function(ip){
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
-#' is_proxy("8.8.8.8")
+#' @examples \dontrun{
+#' is_proxy("1.0.241.135")
 #' }
 #'
 
@@ -58,4 +58,30 @@ is_proxy <- function(ip){
   py_run_string("j1 = json.dumps(rec1)")
   result = fromJSON(py$j1)
   return(result['is_proxy'])
+}
+
+#' @title Lookup for IP address proxy information using IP2Proxy web service.
+#' @param api_key IP2Proxy web service API key
+#' @param ip IPv4 or IPv6 address
+#' @param package Package to use for IP2Proxy web service.
+#' @description Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type and provider. The return values will be depending on the IP2Proxy web service package used.
+#' @return Return all the proxy information about the IP address
+#' @import reticulate
+#' @import jsonlite
+#' @export
+#' @examples \dontrun{
+#' lookup_web_service("1.0.241.135","PX1")
+#' }
+#'
+
+lookup_web_service <- function(api_key, ip, package = 'PX1'){
+  py_run_string("import IP2Proxy")
+  py_run_string("import json")
+  ws_initialize = paste("ws = IP2Proxy.IP2ProxyWebService('", api_key, "','", package, "',True)", sep = "")
+  py_run_string(ws_initialize)
+  API_result = paste("rec = ws.lookup('", ip, "')", sep = "")
+  py_run_string(API_result)
+  py_run_string("j = json.dumps(rec)")
+  result = fromJSON(py$j)
+  return(result)
 }

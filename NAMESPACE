@@ -2,6 +2,12 @@
 
 export(get_all)
 export(is_proxy)
+export(lookup_web_service)
 export(open)
+export(plot_map)
+import(ggplot2)
 import(jsonlite)
+import(maps)
 import(reticulate)
+import(scales)
+import(utils)
