@@ -9,6 +9,10 @@ This library allows user to query an IP address if it was being used as open pro
 
 IP2Proxy R package required IP2Proxy Python library to work. In order to install IP2Proxy Python library, you can use the following command:
 
+   ```Python
+   pip install IP2Proxy
+   ```
+
 ## Installation
 
 1. In your RStudio IDE, type the following command into the console:
@@ -18,10 +22,6 @@ IP2Proxy R package required IP2Proxy Python library to work. In order to install
    require(devtools)
    ```
 
-   ```
-   
-   ```
-
 2. After that, install IP2Proxy R package by using the following command: `install_github("ip2location/ip2proxy-r")`
 
 ## Usage
@@ -29,6 +29,8 @@ IP2Proxy R package required IP2Proxy Python library to work. In order to install
 1. Load IP2Proxy BIN database by the following command: `ip2proxy::open(path_to_your_database)`
 2. Query all the proxy information for an IP address by this command: `ip2proxy::get_all(ip_address)`
 3. To know whether an IP address is a proxy or not, you can do this by: `ip2proxy::is_proxy(ip_address)`
+4. Query the proxy information for an IP address using web service: `ip2proxy::lookup_web_service(your_api_key, ip_address, package)`
+5. To plot IP addresses on the map: ip2proxy::plot_map(c(list_of_ip_addresses))
 
 ## Proxy Type
 
