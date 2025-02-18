@@ -19,7 +19,7 @@ open <- function(bin_location){
 
 #' @title Lookup for IP address proxy information
 #'
-#' @description Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type and provider. The return values will be depending on the BIN data loaded.
+#' @description Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type, provider and fraud score. The return values will be depending on the BIN data loaded.
 #' @param ip IPv4 or IPv6 address
 #' @return Return all the proxy information about the IP address
 #' @import reticulate
