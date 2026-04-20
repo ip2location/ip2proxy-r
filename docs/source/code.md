@@ -19,19 +19,19 @@ Retrieve geolocation information for an IP address.
 
 | Field Name       | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| is_proxy    |     Determine whether if an IP address was a proxy or not. Returns 0 is not proxy, 1 if proxy, and 2 if it's data center IP |
-| country_short    |     Two-character country code based on ISO 3166. |
-| country_long    |     Country name based on ISO 3166. |
-| region     |     Region or state name. |
-| city       |     City name. |
-| isp            |     Internet Service Provider or company\'s name. |
-| domain         |     Internet domain name associated with IP address range. |
-| usage_type      |     Usage type classification of ISP or company. |
-| asn            |     Autonomous system number (ASN). |
-| as_name             |     Autonomous system (AS) name. |
-| last_seen       |     Proxy last seen in days. |
-| threat         |     Security threat reported. |
-| proxy_type      |     Type of proxy. |
-| provider       |     Name of VPN provider if available. |
-| fraud_score       |     Potential risk score (0 - 99) associated with IP address. |
+| is_proxy         | Determine whether if an IP address was a proxy or not. Returns 0 is not proxy, 1 if proxy, and 2 if it's a data center IP, search engine IP or AI Crawler IP. |
+| country_short    | Two-character country code based on ISO 3166. |
+| country_long     | Country name based on ISO 3166. |
+| region           | Region or state name. |
+| city             | City name. |
+| isp              | Internet Service Provider or company\'s name. |
+| domain           | Internet domain name associated with IP address range. |
+| usage_type       | Usage type classification of ISP or company. |
+| asn              | Autonomous system number (ASN). |
+| as_name          | Autonomous system (AS) name. |
+| last_seen        | Proxy last seen in days. |
+| threat           | Security threat reported. |
+| proxy_type       | Type of proxy. |
+| provider         | Name of VPN provider if available. |
+| fraud_score      | Potential risk score (0 - 99) associated with IP address. |
 ```
