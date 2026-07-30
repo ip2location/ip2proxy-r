@@ -21,7 +21,7 @@ Find the country, region, city, ISP, domain name, usage types, asn, as name, las
 }
 \examples{
 \dontrun{
-lookup_web_service("1.0.241.135","PX1")
+lookup_web_service("YOUR_API_KEY", "1.0.241.135", "PX1")
 }
 
 }
